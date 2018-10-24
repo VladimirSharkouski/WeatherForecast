@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./src/css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="app" id ="app">
+            <div class="header">
+                <div class="app-name">Прогноз погоды городов Беларуси</div>
+                <div class="date"></div>
+            </div>
+            <div class="sidebar1">
+                <div class = "city-menu"> 
+                    <div class = "city-menu-text">
+                        Выберите город:
+                    </div>
+                    <select id = "select-city"> 
+                    <option name = "city">Минск</option>
+                    <option name = "city">Брест</option>
+                    <option name = "city">Витебск</option>
+                    <option name = "city">Гомель</option>
+                    <option name = "city">Гродно</option>
+                    <option name = "city">Могилев</option>
+                    </select>
+                    <button id="button-city">Получить прогноз</button>
+                </div>        
+            </div>
+            <div class="main">
+                <div class="show-weather" id="show-weater-value">
+                    <div class="city">Минск
+                    </div>
+                    <div class="picture">
+                        
+                    </div>
+                    <div class="temperature">
+                        <div><span id="getTemp"></span>
+                        <span class = "degCel"> &#176;C</span>
+                        </div>
+                        <img src="./src/img/weahter-icons/temperature_100.png" >
+                    </div>
+                    <div class="time" id="timeNow"></div>
+                    <div class="wind-speed-icon">
+                        <img class="weather-icon" src="./src/img/weahter-icons/Wind-Flag.png">
+                    </div>
+                    <div class="wind-speed getData">
+                        Скорость ветра 
+                        <br><span id="getSpeed"></span> м/с
+                    </div>
+                    <div class="wind-derection-icon">
+                        <img class="weather-icon" src="./src/img/weahter-icons/Wind-Flag.png">
+                    </div>
+                    <div class="wind-derection getData">
+                        Направление ветра 
+                        <br><span id="getDerection"></span>
+                    </div>
+                    <div class="humidity-icon">
+                        <img class="weather-icon" src="./src/img/weahter-icons/Humidity.png">
+                    </div>
+                    <div class="humidity getData">
+                        Влажность: 
+                        <br><span id="getHumidity"></span> %
+                    </div>
+                    <div class="pressure-icon">
+                        <img class="weather-icon" src="./src/img/weahter-icons/barometr_100.png">
+                        </div>
+                    <div class="pressure getData">
+                        Атмосферное давление 
+                        <br><span id="getPress"></span> мм.рт.ст.
+                    </div>
+                    <div class="nextDays"></div>
+                 </div>
+            </div>
+        </div>
+        <script src = "./src/js/index.js"></script>
+    </body>
+</html>

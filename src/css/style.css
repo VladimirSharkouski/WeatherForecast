@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: whitesmoke;
+    
+}
+.app {
+    margin: 0 auto;
+    max-width: 1600px;
+    min-height: 100%;
+    width: 100%;
+    background: url(../img/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 7fr;
+    grid-template-rows: minmax(100px, 1fr) 7fr;
+    grid-template-areas: "header header"
+                         "sidebar1 main"
+}
+.header {
+
+    background-color: blue;
+    position: relative;
+    grid-area: header;
+}
+
+.app-name {
+    position: absolute;
+    left: 1%;
+    min-width: 40%;
+    font: italic bold 2rem/3 sans-serif;
+    color: white;
+    text-align: left;
+    float: left;
+}
+.date {
+    position: absolute;
+    right: 1%;
+    font: italic bold 2rem/3 sans-serif;
+    color: white;
+}
+
+.sidebar1 {
+    grid-area: sidebar1;
+    background-color: cornflowerblue;
+}
+.city-menu {
+    margin: 30px auto;
+    width: 80%;
+}
+.city-menu-text {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+#select-city {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+}
+#button-city {
+    display: block;
+    margin: 5px auto;
+    width: 80%;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 3px grey, 4px 4px 3px black;
+}
+
+.main {
+    margin: auto;
+    grid-area: main;
+}
+
+.show-weather {
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    max-height: 800px;
+    background-color: rgba(25,135,225,0.5);
+    border-radius: 50px;
+    border: 3px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,.8);
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-areas: "city city wind-speed-icon wind-speed"
+                         "picture temperature wind-derection-icon wind-derection"
+                         "picture temperature humidity-icon humidity"
+                         "time time pressure-icon pressure"
+                         "nextDays nextDays nextDays nextDays";
+    justify-items: center;
+    align-items: center;
+}
+.city {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(252, 101, 31);
+    letter-spacing: .2em;
+    text-shadow: 2px 2px 3px white, 4px 4px 3px black; 
+    grid-area: city;
+}
+.picture {
+    grid-area: picture;
+}
+.temperature {
+    text-align: center;
+    padding: 0 auto;
+    font-size: 4rem;
+    font-weight: 700;
+    color: aliceblue;
+    text-shadow: 0px 0px 15px rgba(0,0,0,.6); 
+    grid-area: temperature;
+}
+
+./*temperature-icon {
+    grid-area: temperature-icon;
+}*/
+.temperature>img {
+    width: 70%;
+    height: 70%;
+}
+#getTemp {
+    font-size: 2em;
+}
+.time {
+    grid-area: time;
+    width: 98%;
+    height: 98%;
+    align-content: center;
+}
+
+.time-Day {
+    margin: 5px 5%;;
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+    text-align: center;
+    line-height: 3.5;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    color: #1e1ed3;
+    text-decoration: none;
+    /*text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 15px;*/
+    user-select: none;
+    outline: none;
+    border-radius: 3px / 100%;
+    background-image:
+       linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+       linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+       linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+       linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+       linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+       linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+    background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+    box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px; 
+}    
+.time-Day:hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+    }
+.time-Day:active {
+    top: 1px;
+    }
+    
+.humidity {
+    grid-area: humidity;
+}
+.humidity-icon {
+    grid-area: humidity-icon;
+}
+.pressure {
+    grid-area: pressure; 
+}
+.pressure-icon {
+    grid-area: pressure-icon;
+}
+#getPress, #getDerection, #getHumidity, #getSpeed{
+    
+    font-weight: 600;
+}
+.wind-derection-icon {
+    grid-area: wind-derection-icon;
+}
+.wind-speed-icon {
+    grid-area: wind-speed-icon;
+}
+.wind {
+    grid-area: wind;
+}
+.getData {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.nextDays {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    max-height: 200px;
+    grid-area: nextDays;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "one two three four five";
+}
+.day1 {
+    margin-left: 4%;
+    grid-area: one;
+}
+.day2 {
+    grid-area: two;
+}
+.day3 {
+    grid-area: three;
+}
+.day4 {
+    grid-area: four;
+}
+.day5 {
+    margin-right: 4%;
+    grid-area: five;
+}
+.days {
+    background-color: rgba(35,150,250,0.4);
+    box-shadow: 0px 4px 10px rgba(0,0,0,.8);
+    border-radius: 50px;
+    text-align: center;
+}
+.classDate {
+    width: 60%;
+    margin: 3% auto;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(42, 0, 139);
+    border-bottom: 2px solid rgba(42, 0, 139, 0.5);
+}
+.classDay {
+    width: 75%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(42, 0, 139);
+}
+
+.classTemp {
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.classPict{
+    margin-top: 5%;
+}
+.classPict>img {
+    width: 45%;
+    height: 45%;
+}
