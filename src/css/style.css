@@ -136,14 +136,14 @@ body {
     align-content: center;
 }
 
-.time-Day {
-    margin: 5px 5%;;
+.time-Day, .time-Day-choose {
+    margin: 5px 3%;;
     display: inline-block;
-    width: 40%;
+    width: 15.5%;
     height: 40%;
     text-align: center;
-    line-height: 3.5;
-    font-size: 1.2rem;
+    line-height: 3;
+    font-size: 1.1rem;
     font-weight: 600;
     position: relative;
     color: #1e1ed3;
@@ -164,6 +164,13 @@ body {
     background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
     box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px; 
 }    
+.time-Day-choose {
+    background: rgba(55,55,55,.8)
+}
+
+#timeNow {
+    width: 80%;
+}
 .time-Day:hover {
     transition: .5s linear;
     background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
