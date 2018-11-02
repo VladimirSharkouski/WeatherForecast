@@ -5,105 +5,70 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./src/css/style.css">
-        <title>Document</title>
+        <title>Weather Forecast</title>
     </head>
     <body>
-        <div class="app">
+        <div class="app" id ="app">
             <div class="header">
-                <div class="app-name">WEATHER APP</div>
-                <div class="date"></div>
             </div>
             <div class="sidebar1">
-                <div class = "city-menu"> 
-                    <div class = "city-menu-text">
-                        Выберите город:
+                    <div id ="langApp">
+                        <input id="toggle-rus" class="toggle" name="toggle" type="radio" checked>
+                        <label for="toggle-rus" class="btn">RU</label>
+                        <input id="toggle-eng" class="toggle" name="toggle"type="radio">
+                        <label for="toggle-eng" class="btn">EN</label>
                     </div>
-                    <select id = "select-city"> 
-                    <option name = "city">Минск</option>
-                    <option name = "city">Брест</option>
-                    <option name = "city">Витебск</option>
-                    <option name = "city">Гомель</option>
-                    <option name = "city">Гродно</option>
-                    <option name = "city">Могилев</option>
-                    </select>
-                    <button id="button-city">Получить прогноз</button>
+                <div class = "city-menu">
                 </div>        
             </div>
             <div class="main">
                 <div class="show-weather" id="show-weater-value">
-                    <div class="city">Минск
+                    <div class="city">
                     </div>
                     <div class="picture">
-                        <img class="weather-icon" src="./src/img/weahter-icons/sun.png">
+                        
                     </div>
                     <div class="temperature">
-                        <span id="getTemp"></span>
+                        <div><span id="getTemp"></span>
                         <span class = "degCel"> &#176;C</span>
-                    </div>
-                    <div class="temperature-icon">
+                        </div>
                         <img src="./src/img/weahter-icons/temperature_100.png" >
                     </div>
-                    <div class="time">
-                    </div>
+                    <div class="time" id="timePeriod"></div>
                     <div class="wind-speed-icon">
                         <img class="weather-icon" src="./src/img/weahter-icons/Wind-Flag.png">
                     </div>
                     <div class="wind-speed getData">
-                        Скорость ветра 
-                        <br><span id="getSpeed"></span> м/с
+                        <span id="windSpeedId"></span>
+                        <br><span id="getSpeed"></span> 
+                        <span id="speed"></span>
                     </div>
                     <div class="wind-derection-icon">
-                        <img class="weather-icon" src="./src/img/weahter-icons/Wind-Flag.png">
+                        <img class="weather-icon" src="./src/img/weahter-icons/fluger.png">
                     </div>
                     <div class="wind-derection getData">
-                        Направление ветра 
+                        <span id="windDerectionId"></span>
                         <br><span id="getDerection"></span>
                     </div>
                     <div class="humidity-icon">
                         <img class="weather-icon" src="./src/img/weahter-icons/Humidity.png">
                     </div>
                     <div class="humidity getData">
-                        Влажность: 
+                        <span id="humidityId"></span>
                         <br><span id="getHumidity"></span> %
                     </div>
                     <div class="pressure-icon">
                         <img class="weather-icon" src="./src/img/weahter-icons/barometr_100.png">
                         </div>
                     <div class="pressure getData">
-                        Атмосферное давление 
-                        <br><span id="getPress"></span> мм.рт.ст.
+                        <span id="pressureId"></span>
+                        <br><span id="getPress"></span>
+                        <span id="pressureValue"></span>
                     </div>
-                    <div class="nextDays">
-                         <div class="one days">
-                            <div id="date1"></div>
-                            <div id="temp1"></div>
-                            <div id="pict1"></div>
-                        </div>
-                        <div class="two days">
-                            <div id="date2"></div>
-                            <div id="temp2"></div>
-                            <div id="pict2"></div>
-                        </div>
-                        <div class="three days">
-                            <div id="date3"></div>
-                            <div id="temp3"></div>
-                            <div id="pict3"></div>
-                        </div>
-                        <div class="four days">
-                            <div id="date4"></div>
-                            <div id="temp4"></div>
-                            <div id="pict4"></div>
-                        </div>
-                        <div class="five days">
-                            <div id="date5"></div>
-                            <div id="temp5"></div>
-                            <div id="pict5"></div>
-                        </div>
-                        
-                    </div>
+                    <div class="nextDays"></div>
                  </div>
             </div>
         </div>
-        <script src = "./src/js/index.js"></script>
+        <script type="module" src="./src/js/index.js"></script>
     <script type="text/javascript" src="dist/main.js"></script></body>
 </html>

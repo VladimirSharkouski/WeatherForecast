@@ -7,7 +7,6 @@ let forecastNext = (data) => {
             weekDay = thsDay.getDate(),
             day = thsDay.getDay(),
             hour = thsDay.getHours();
-        //console.log(hour);    
         day = day%7;
            if (day === 1) {
                 day = "Понедельник";
@@ -42,5 +41,5 @@ let forecastNext = (data) => {
         document.getElementById("temp"+i).innerText = Math.round(data.list[i*8-1].main.temp_max-273) + " C";
         document.getElementById("pict"+i).innerHTML = "<img src=\"./src/img/weahter-icons/"+src+".png\">";
     }
-};
+}
 export default forecastNext;
