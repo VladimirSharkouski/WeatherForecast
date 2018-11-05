@@ -9,6 +9,7 @@ let lang = "rus",
     btnClassDay = document.getElementsByClassName("time-Day"),
     divClassDays = document.getElementsByClassName("classDay"),
     cityName = document.getElementsByClassName("city"),
+    timeDay = document.getElementById("timePeriod"),
     cityChooseName = document.getElementsByName("city");
 
 let changeLang = (e) => {
@@ -55,17 +56,18 @@ let changeLang = (e) => {
         pressureId.innerText = "Pressure atmosphere";
         pressValId.innerText = "mm Hg";
         
-        for (let i=0; i<btnClassDay.length; i++) {
-            if (btnClassDay[i].innerText === "Сейчас") {
-                btnClassDay[i].innerText = "Now";   
-            } else if (btnClassDay[i].innerText === "Утро") {
-                btnClassDay[i].innerText = "Morning";   
-            } else if (btnClassDay[i].innerText === "День") {
-                btnClassDay[i].innerText = "Day";   
-            } else if (btnClassDay[i].innerText === "Вечер") {
-                btnClassDay[i].innerText = "Evening";   
-            } else if (btnClassDay[i].innerText === "Ночь") {
-                btnClassDay[i].innerText = "Night"}
+        
+        for (let i=0; i<timeDay.children.length; i++) {
+            if (timeDay.children[i].innerText === "Сейчас") {
+                timeDay.children[i].innerText = "Now";   
+            } else if (timeDay.children[i].innerText === "Утро") {
+                timeDay.children[i].innerText = "Morning";   
+            } else if (timeDay.children[i].innerText === "День") {
+                timeDay.children[i].innerText = "Day";   
+            } else if (timeDay.children[i].innerText === "Вечер") {
+                timeDay.children[i].innerText = "Evening";   
+            } else if (timeDay.children[i].innerText === "Ночь") {
+                timeDay.children[i].innerText = "Night"}
         };
         for (let i=0; i<divClassDays.length; i++) {
             if (divClassDays[i].innerText === "Понедельник") {
@@ -143,17 +145,17 @@ let changeLang = (e) => {
         pressureId.innerText = "Атмосферное давление ";
         pressValId.innerText = "мм.рт.ст.";
         //время суток
-        for (let i=0; i<btnClassDay.length; i++) {
-            if (btnClassDay[i].innerText === "Now") {
-            btnClassDay[i].innerText = "Сейчас";   
-            } else if (btnClassDay[i].innerText === "Morning") {
-            btnClassDay[i].innerText = "Утро";   
-            } else if (btnClassDay[i].innerText === "Day") {
-            btnClassDay[i].innerText = "День";   
-            } else if (btnClassDay[i].innerText === "Evening") {
-            btnClassDay[i].innerText = "Вечер";   
-            } else if (btnClassDay[i].innerText === "Night") {
-            btnClassDay[i].innerText = "Ночь"}
+        for (let i=0; i<timeDay.children.length; i++) {
+            if (timeDay.children[i].innerText === "Now") {
+            timeDay.children[i].innerText = "Сейчас";   
+            } else if (timeDay.children[i].innerText === "Morning") {
+            timeDay.children[i].innerText = "Утро";   
+            } else if (timeDay.children[i].innerText === "Day") {
+            timeDay.children[i].innerText = "День";   
+            } else if (timeDay.children[i].innerText === "Evening") {
+            timeDay.children[i].innerText = "Вечер";   
+            } else if (timeDay.children[i].innerText === "Night") {
+            timeDay.children[i].innerText = "Ночь"}
         }
         //дни недели
         for (let i=0; i<divClassDays.length; i++) {

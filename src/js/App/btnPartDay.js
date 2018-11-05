@@ -33,7 +33,7 @@ let btnPartDay = () =>{
     }
     let divNow = document.createElement("div");
     divNow.id = "timeNow";
-    divNow.className = "time-Day";
+    divNow.className = "time-Day-choose";
     let btnNow = "Сейчас";
     divNow.innerHTML = btnNow;
     timeDay.insertBefore(divNow, timeDay.children[0]);
